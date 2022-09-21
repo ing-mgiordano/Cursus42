@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 18:55:43 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/21 19:07:20 by migiorda         ###   ########.fr       */
+/*   Created: 2022/09/21 17:42:13 by migiorda          #+#    #+#             */
+/*   Updated: 2022/09/21 17:47:04 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	while (i < n)
+	if (!dest && !src)
+		return (0);
+	while (1 < n)
 	{
-		if (((unsigned char *)str)[i] == (unsigned char)c)
-			return ((void*)(str + 1));
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return (0);
+	return (dest);
 }
 
-//La función memchr devuelve un apuntador al caracter localizado, 
-//o un apuntador nulo si el carácter no existe en el objeto.
+//Copia los primeros n caracteres del objeto apuntado por s2 al objeto apuntado por s1

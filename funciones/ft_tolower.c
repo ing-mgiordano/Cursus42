@@ -6,13 +6,13 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:56:37 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/20 13:57:54 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:16:16 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'B')
 	{
