@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:22:35 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/21 18:57:22 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/21 20:01:43 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,19 @@ char	*ft_strrchr(const char *str, int c)
 	while (str[i])
 	{
 		if (str[i] == c)
-			return ((char *)str[i]);
+			return ((char *)&str[i]);
 		i--;
 	}
 	if (c == '\0')
-		return ((char *)str[i]);
+		return ((char *)&str[i]);
 	return (0);
 }
 
+#include <stdio.h>
+int main(void)
+{
+	printf("%s", ft_strrchr("Hello", 'l'));
+}
 //La función strrchr localiza la última instancia de c (convertido a char) en la 
 //cadena a la cual señala s. El carácter nulo de terminación se considera como parte 
 //de la cadena. La función strrchr devuelve un apuntador al carácter, o un apuntador 

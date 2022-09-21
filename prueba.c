@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   prueba.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 20:12:13 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/21 20:13:43 by migiorda         ###   ########.fr       */
+/*   Created: 2022/09/21 20:27:55 by migiorda          #+#    #+#             */
+/*   Updated: 2022/09/21 20:59:00 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+#include <stdio.h>
+#include <string.h>
+int main(void)
 {
-	
+	printf("%s", strnstr("helloworld", "llow", 10));
 }
