@@ -6,9 +6,11 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 20:51:15 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/20 17:00:52 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:45:09 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
@@ -24,10 +26,4 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 		i++;
 	}
 	return (0);
-}
-
-#include <stdio.h>
-int main(void)
-{
-	printf("%d", ft_strncmp("Hello", "HelloWorld", 4));
 }

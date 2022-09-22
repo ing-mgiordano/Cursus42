@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 17:42:13 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/22 18:01:45 by migiorda         ###   ########.fr       */
+/*   Created: 2022/09/22 16:59:12 by migiorda          #+#    #+#             */
+/*   Updated: 2022/09/22 17:56:41 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
-	size_t	i;
+	char	*sub;
 
-	i = 0;
-	if (!dest && !src)
-		return (0);
-	while (i < n)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
+  buff = (char *)malloc(sizeof(char) * (len + 1));
+  if(!buff)
+      return (NULL);
+  while (str)
+  {
+		sub[] = str[start]
+  }
 }
-
-//Copia los primeros n caracteres del objeto 
-//apuntado por s2 al objeto apuntado por s1
