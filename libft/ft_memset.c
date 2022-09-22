@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:32:43 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/21 18:27:48 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:38:38 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 
-  i = 0;
+	i = 0;
 	while (1 < len)
 	{
 		((unsigned char *)b)[i] = c;
