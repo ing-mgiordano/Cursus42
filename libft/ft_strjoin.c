@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 18:55:43 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/23 13:42:59 by migiorda         ###   ########.fr       */
+/*   Created: 2022/09/23 16:31:24 by migiorda          #+#    #+#             */
+/*   Updated: 2022/09/23 17:03:29 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+char	*ft_strjoin(char const *str1, char const *str2)
 {
-	size_t	i;
+	char	lenstr1;
+	char	lenstr2;
+	char	*strjoin;
+	int		i;
+	int		j;
 
+	lenstr1 = ft_strlen((char *)str1);
+	lenstr2 = ft_strlen((char *)str2);
+	strjoin = (char *)malloc(sizeof(char) * (lenstr1 + lenstr2 + 1));
+	if (!str1 || !str2 || !strjoin)
+		return (NULL);
 	i = 0;
-	while (i < n)
+	while (str1[i])
 	{
-		if (((unsigned char *)str)[i] == (unsigned char)c)
-			return ((void *)(str + i));
+		strjoin[i] = str1[i];
 		i++;
 	}
-	return (0);
+	j = 0;
+	while (str2[j])
+	{
+		strjoin[i++] = str2[j++];
+	}
+	strjoin[i] = '\0';
+	return (strjoin);
 }
-
-//La función memchr devuelve un apuntador al caracter localizado, 
-//o un apuntador nulo si el carácter no existe en el objeto.

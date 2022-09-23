@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:22:35 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/22 18:02:45 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/23 12:51:50 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
-	i = ft_strlen(str) - 1;
-	while (str[i])
+	i = ft_strlen(str);
+	while (i >= 0)
 	{
 		if (str[i] == c)
 			return ((char *)&str[i]);
 		i--;
 	}
 	if (c == '\0')
-		return ((char *)&str[i]);
+		return ((char *)str);
 	return (0);
 }
 

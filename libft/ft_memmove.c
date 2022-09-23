@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:19:00 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/22 18:01:54 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/23 14:17:06 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	if (src < dest)
 	{
 		while (++i <= len)
