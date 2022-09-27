@@ -23,6 +23,7 @@ ft_tolower.c\
 ft_toupper.c\
 ft_substr.c\
 ft_strjoin.c\
+ft_strtrim.c\
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
