@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:59:12 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/27 18:09:43 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/28 10:35:42 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
+	if (len > ft_strlen(str))
+		len = ft_strlen(str);
 	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str || !sub)
 		return (NULL);
@@ -35,4 +37,3 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	sub[j] = '\0';
 	return (sub);
 }
-//quedan algunos errores de paco
