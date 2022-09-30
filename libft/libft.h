@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:11:08 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/23 15:23:15 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/30 11:29:07 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 // Funciones de libc
 int			ft_isalpha(int c);
@@ -60,5 +66,6 @@ void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 
 // Funciones bonus
+t_list		*ft_lstnew(void *content);
 
 #endif
