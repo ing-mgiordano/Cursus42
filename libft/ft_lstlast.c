@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 11:36:46 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/30 11:49:48 by migiorda         ###   ########.fr       */
+/*   Created: 2022/09/30 12:36:06 by migiorda          #+#    #+#             */
+/*   Updated: 2022/09/30 12:40:53 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst && new)
+	if (lst)
 	{
-		new->next = *lst;
-		*lst = new;
+		while (lst->next)
+			lst = lst->next;
 	}
+	return (lst);
 }
