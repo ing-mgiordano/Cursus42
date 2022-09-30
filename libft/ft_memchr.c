@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:55:43 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/23 13:42:59 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/30 15:59:05 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,3 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (0);
 }
-
-//La función memchr devuelve un apuntador al caracter localizado, 
-//o un apuntador nulo si el carácter no existe en el objeto.

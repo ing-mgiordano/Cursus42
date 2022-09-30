@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:42:13 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/22 18:01:45 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/30 15:59:15 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-//Copia los primeros n caracteres del objeto 
-//apuntado por s2 al objeto apuntado por s1

@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:11:08 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/30 11:40:17 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:00:14 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 typedef struct s_list
 {
-	void			*content;		//info contenida en el nodo
-	struct s_list	*next;  //siguiente nodo
+	void			*content;
+	struct s_list	*next;
 }	t_list;
 
 // Funciones de libc
