@@ -12,8 +12,7 @@ ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 BONUS_O = $(BONUS:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
-
+CFLAGS = -Wall -Werror -Wextra 
 ARCHIVER = ar rcs
 NAME = libft.a
 OFILES = $(CFILES:.c=.o)

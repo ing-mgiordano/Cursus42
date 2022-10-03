@@ -6,36 +6,57 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:31:24 by migiorda          #+#    #+#             */
-/*   Updated: 2022/09/23 17:03:29 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/10/03 09:57:43 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *str1, char const *str2)
+static char	*ft_strcpy(char *dest, char *src)
 {
-	char	lenstr1;
-	char	lenstr2;
-	char	*strjoin;
 	int		i;
-	int		j;
 
-	lenstr1 = ft_strlen((char *)str1);
-	lenstr2 = ft_strlen((char *)str2);
-	strjoin = (char *)malloc(sizeof(char) * (lenstr1 + lenstr2 + 1));
-	if (!str1 || !str2 || !strjoin)
-		return (NULL);
 	i = 0;
-	while (str1[i])
+	while (src[i] != '\0')
 	{
-		strjoin[i] = str1[i];
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+static char	*ft_strcat(char *dest, char *src)
+{
+	int	i;
+	int	j;
+
+	i = 0;
 	j = 0;
-	while (str2[j])
+	while (dest[i] != '\0')
 	{
-		strjoin[i++] = str2[j++];
+		i++;
 	}
-	strjoin[i] = '\0';
-	return (strjoin);
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	size_t	newlen;
+	char	*newstr;
+
+	if (!s1 && !s2)
+		return (NULL);
+	newlen = (int)ft_strlen(s1) + (int)ft_strlen(s2);
+	newstr = malloc(sizeof(char) * newlen + 1);
+	if (!newstr)
+		return (NULL);
+	ft_strcat(ft_strcpy(newstr, (char *)s1), (char *)s2);
+	return (newstr);
 }
