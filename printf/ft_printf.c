@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:43:51 by migiorda          #+#    #+#             */
-/*   Updated: 2022/10/07 11:35:48 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/10/07 15:36:03 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static	void	ft_check_conv(char s, va_list *args, int *len, int *i)
 	else if (s == 'p')
 		ft_pointer(va_arg(*args, size_t), len);
 	else if (s == 'c')
-		ft_putchar_len(va_arg(*args, char), len);
+		ft_putchar_len(va_arg(*args, int), len);
 	else if (s == '%')
 		ft_putchar_len('%', len);
 }
@@ -38,10 +38,11 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	int		len;
 
+	i = 0;
 	va_start(args, str);
 	while (str[i] != '\0')
 	{
-		if (str == '%')
+		if (str[i] == '%')
 		{
 			i++;
 			ft_check_conv(str[i], &args, &len, &i);
@@ -58,4 +59,11 @@ int	ft_printf(const char *str, ...)
 }
 
 //va_start va_end va_arg
-//https://learn.microsoft.com/es-es/cpp/c-runtime-library/reference/va-arg-va-copy-va-end-va-start?view=msvc-170
+//https://learn.microsoft.com/es-es/cpp/c-runtime-library/reference/
+//va-arg-va-copy-va-end-va-start?view=msvc-170
+//
+//La función printf transporta datos desde la memoria a la pantalla, 
+//a diferencia de scanf, que envía datos desde el teclado para 
+//almacenarlos en la memoria. La función printf devuelve el número 
+//de caracteres escritos. Si devuelve un valor negativo indica que 
+//se ha producido un error.

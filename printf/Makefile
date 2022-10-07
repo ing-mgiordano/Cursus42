@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 
-CFILES = ft_printf.c
+CFILES = ft_printf.c ft_words.c ft_numbers.c
 
 OBJS = $(CFILES:.c=.o)
 
