@@ -6,13 +6,13 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:43:51 by migiorda          #+#    #+#             */
-/*   Updated: 2022/10/04 15:08:46 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/10/07 11:35:48 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-ft_check_conv(char s, va_list *args, int *len, int *i)
+static	void	ft_check_conv(char s, va_list *args, int *len, int *i)
 {
 	if (s == 's')
 		ft_string(va_arg(*args, char *), len);
@@ -56,3 +56,6 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
+
+//va_start va_end va_arg
+//https://learn.microsoft.com/es-es/cpp/c-runtime-library/reference/va-arg-va-copy-va-end-va-start?view=msvc-170
