@@ -6,7 +6,7 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:23:39 by migiorda          #+#    #+#             */
-/*   Updated: 2022/10/07 15:32:45 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:33:03 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@
 
 # include <unistd.h>
 # include <stdarg.h>
-# include <stddef.h>
-# include <stdlib.h>
 
 void			ft_putchar_len(char c, int *len);
 void			ft_string(char *args, int *len);
 
 void			ft_number(int num, int *len);
-void			ft_hexadecimal(unsigned int x, int *len, char case);
+void			ft_hexadecimal(unsigned int x, int *len, char up_lo);
 void			ft_unsigned_int(unsigned int num, int *len);
 void			ft_pointer(size_t pointer, int *len);
 

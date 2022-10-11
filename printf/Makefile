@@ -2,7 +2,7 @@ NAME = libftprintf.a
 
 CFILES = ft_printf.c ft_words.c ft_numbers.c
 
-OBJS = $(CFILES:.c=.o)
+OFILES = $(CFILES:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -12,7 +12,7 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OFILES)
 	$(ARCHIVER) $(NAME) $(OFILES)
 
 clean:

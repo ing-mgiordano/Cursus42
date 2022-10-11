@@ -6,20 +6,20 @@
 /*   By: migiorda <migiorda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:43:51 by migiorda          #+#    #+#             */
-/*   Updated: 2022/10/07 15:36:03 by migiorda         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:23:13 by migiorda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	void	ft_check_conv(char s, va_list *args, int *len, int *i)
+static	void	ft_check_conv(char s, va_list *args, int *len)
 {
 	if (s == 's')
 		ft_string(va_arg(*args, char *), len);
 	else if (s == 'd' || s == 'i')
 		ft_number(va_arg(*args, int), len);
 	else if (s == 'u')
-		ft_unsignedint(va_arg(*args, unsigned int), len);
+		ft_unsigned_int(va_arg(*args, unsigned int), len);
 	else if (s == 'x')
 		ft_hexadecimal(va_arg(*args, unsigned int), len, 'x');
 	else if (s == 'X')
@@ -39,13 +39,14 @@ int	ft_printf(const char *str, ...)
 	int		len;
 
 	i = 0;
+	len = 0;
 	va_start(args, str);
 	while (str[i] != '\0')
 	{
 		if (str[i] == '%')
 		{
 			i++;
-			ft_check_conv(str[i], &args, &len, &i);
+			ft_check_conv(str[i], &args, &len);
 			i++;
 		}
 		else
